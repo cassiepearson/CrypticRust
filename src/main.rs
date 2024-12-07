@@ -2,10 +2,8 @@ mod cryptography;
 mod general;
 mod number_theory;
 
-use git_version::git_version;
+use anyhow::{anyhow, Result};
 
-const GIT_VERSION: &str = git_version!();
-
-fn main() {
-    println!("Version: {:?}", GIT_VERSION);
+fn main() -> Result<()> {
+    Ok(())
 }
