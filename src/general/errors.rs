@@ -25,24 +25,6 @@ pub enum NumberTheoryErr {
     InverseDNE(String),
 }
 
-/// 2D Geometry errors
-///
-/// Errors within 2D geometry
-#[allow(dead_code)]
-#[derive(Debug, Error)]
-pub enum Geometry2DErr {
-    // TODO: Fill out as needed
-}
-
-/// 3D Geometry errors
-///
-/// Errors within 2D geometry
-#[allow(dead_code)]
-#[derive(Debug, Error)]
-pub enum Geometry3DErr {
-    // TODO: Fill out as needed
-}
-
 /// Cryptography errors
 ///
 /// Errors within the classical cryptography module
