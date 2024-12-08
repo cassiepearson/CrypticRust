@@ -1,15 +1,15 @@
 [package]
-name = "CrypticRust"
+name = "crypticRust"
 version = "0.1.1"
 authors = ["Cassandra Pearson <cnegrich@gmail.com>"]
 edition = "2021"
 
 [[bin]]
-name = "CrypticRust"
+name = "crypticRust"
 path = "src/main.rs"
 
 [lib]
-name = "CrypticRust"
+name = "crypticRust"
 path = "src/lib.rs"
 
 [dependencies]
