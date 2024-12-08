@@ -1,6 +1,7 @@
 # Personal
 .DS_Store
 *.todo
+/.idea
 
 # Rust
 /target

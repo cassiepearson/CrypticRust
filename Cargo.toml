@@ -9,7 +9,7 @@ name = "crypticRust"
 path = "src/main.rs"
 
 [lib]
-name = "crypticRust"
+name = "cryptic_rust"
 path = "src/lib.rs"
 
 [dependencies]

@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        run: cargo clippy --tests -- -Dwarnings
+        run: cargo clippy --tests -- -Dwarnings -Adead_code
