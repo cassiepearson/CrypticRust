@@ -16,5 +16,5 @@ cargo doc --document-private-items --open
 <!-- ## Citations
 [AKS Primality Test](https://www.cse.iitk.ac.in/users/manindra/algebra/primality_v6.pdf) -->
 
-[![Release build](https://github.com/cassiepearson/CrypticRust/actions/workflows/rust-builds.yml/badge.svg)](https://github.com/cassiepearson/rust-project-template/actions/workflows/rust-build.yml)
+[![Release build](https://github.com/cassiepearson/CrypticRust/actions/workflows/rust-build.yml/badge.svg)](https://github.com/cassiepearson/rust-project-template/actions/workflows/rust-build.yml)
 [![Unit tests](https://github.com/cassiepearson/CrypticRust/actions/workflows/rust-test.yml/badge.svg)](https://github.com/cassiepearson/rust-project-template/actions/workflows/rust-test.yml)
