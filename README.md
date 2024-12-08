@@ -1,7 +1,9 @@
 # Cryptographic math in Rust
 
 ## Methods
+
 The library methods provide the mathematical basis to enable the cryptographic methods. Macros are used heavily within library methods to allow for the math to be type-agnostic and used flexibly.
+
 
 ### Documentation
 
