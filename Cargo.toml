@@ -1,11 +1,11 @@
 [package]
-name = "crypticRust"
+name = "cryptic-rust"
 version = "0.1.1"
 authors = ["Cassandra Pearson <cnegrich@gmail.com>"]
 edition = "2021"
 
 [[bin]]
-name = "crypticRust"
+name = "cryptic-rust"
 path = "src/main.rs"
 
 [lib]
