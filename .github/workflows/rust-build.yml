@@ -1,32 +1,23 @@
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
 
-name: Rust Build
-
-env:
-  CARGO_TERM_COLOR: always
+name: Release build
 
 jobs:
-  build:
+  unit-tests:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout sources
-        uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Install stable toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          profile: minimal
-          toolchain: stable
-          override: true
+      - name: Unix release build
+        run: cargo build --release
 
-      - name: Build release
-        uses: actions-rs/cargo@v1
+      - uses: actions/upload-artifact@v3
         with:
-          command: build
-          args: --release
-
-      - uses: actions/upload-artifact@v2
-        with:
-          name: release-build-upload
-          path: "**/target/release/math"
+          name: example-build
+          path: ./target/release/rust-project-template
+          retention-days: 10
+          if-no-files-found: warn

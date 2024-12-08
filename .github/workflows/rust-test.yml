@@ -1,27 +1,23 @@
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
 
-name: Unit Test
-
-env:
-  CARGO_TERM_COLOR: always
+name: Release build
 
 jobs:
-  test:
+  unit-tests:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout sources
-        uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Install stable toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          profile: minimal
-          toolchain: stable
-          override: true
+      - name: Unix release build
+        run: cargo build --release
 
-      - name: Unit test
-        uses: actions-rs/cargo@v1
+      - uses: actions/upload-artifact@v3
         with:
-          command: test
-          args: --release
+          name: example-build
+          path: ./target/release/rust-project-template
+          retention-days: 10
+          if-no-files-found: warn

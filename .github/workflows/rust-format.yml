@@ -1,28 +1,10 @@
-on: [push, pull_request]
+on: push
 
-name: Rust Format
-
-env:
-  CARGO_TERM_COLOR: always
+name: Rust Format Check
 
 jobs:
-  rustfmt:
-    name: Format
+  clippy-analysis:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout sources
-        uses: actions/checkout@v2
-
-      - name: Install stable toolchain with rustfmt available
-        uses: actions-rs/toolchain@v1
-        with:
-          profile: minimal
-          toolchain: stable
-          override: true
-          components: rustfmt
-
-      - name: Run cargo fmt
-        uses: actions-rs/cargo@v1
-        with:
-          command: fmt
-          args: --all -- --check
+      - uses: actions/checkout@v3
+      - run: cargo fmt -- --check
