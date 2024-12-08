@@ -1,8 +1,8 @@
 //! Numerical Traits - For more convenient trait bounding
 use num::{Bounded, CheckedMul, FromPrimitive, Num, NumCast, ToPrimitive};
+use num_traits::real::Real;
 use rand::distributions::uniform::SampleUniform;
 use std::ops::{AddAssign, DivAssign, MulAssign, RemAssign, SubAssign};
-use num_traits::{real::Real};
 
 pub trait Number:
     Num
