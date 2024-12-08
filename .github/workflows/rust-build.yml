@@ -18,6 +18,6 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: example-build
-          path: ./target/release/crypticRust
+          path: ./target/release/cryptic-rust
           retention-days: 10
           if-no-files-found: warn
